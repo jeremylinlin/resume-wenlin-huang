@@ -59,13 +59,16 @@ urlcolor=black
     %                                                                                           %
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    \centering\textbf{\huge Wenlin (Jeremy) Huang}\\ \vspace{0.1in}
+    \centering\textbf{\huge Wenlin Huang}\\ \vspace{0.1in}
 
     (650) 567-6624,
     \href {mailto:huang.wenl@husky.neu.edu} {huang.wenl@husky.neu.edu},
     {W Mercer Street, Seattle, WA 98119} \\
 
-    {Available for Internship/Co-op: \textbf{\underline{Jan. - Aug. 2018}}}
+    {Seeking
+    \textbf{SDE/Web Developer ({Back-end})} Internship:
+    \textbf{\underline{May - Aug. 2018}}}
+
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %                                                                                           %
@@ -88,8 +91,8 @@ urlcolor=black
         {\footnotesize
         \begin{itemize}
             \resitem{
-            \textbf{Key Courses:} MEAN Stack Web Development, Algorithms,
-            Object-oriented Design
+            \textbf{Key Courses:} Distributed Systems, MEAN Stack Web Development,
+            Algorithms, Object-Oriented Design
             }
         \end{itemize}
         }
@@ -122,16 +125,22 @@ urlcolor=black
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     \resheading{Technical Skills}
+
+    %%% 各种技术的分类这位仁兄做的特别好 https://bozho.net/cv/Bozhidar_Bozhanov_CV.pdf
     \begin{itemize}
         \item {
-        \textbf{Programming Languages:}
+        \textbf{Languages:}
         \vspace{-0.2cm}
-        Java (Proficient), JavaScript (Intermediate), Ruby, Python, Racket
+        Java (Proficient), JavaScript, Ruby, Python, Racket, C, SQL
         }
-
         \item {
-        \textbf{Frameworks and Tools:}
-        Bootstrap, jQuery, AngularJS 1.x, Node/Express.js, Ruby on Rails, Git
+        \textbf{Databases:}
+        \vspace{-0.2cm}
+        MySQL, SQLite, MongoDB, DynamoDB
+        }
+        \item {
+        \textbf{Frameworks/Technologies:}
+        Bootstrap, AngularJS, Node/Express.js, Rails, Git, Amazon EC2
         }
     \end{itemize}
 
@@ -143,12 +152,41 @@ urlcolor=black
 
     \resheading{Academic Projects}
 
+    % --------------------  Project 0 --------------------%
+    \begin{itemize}
+        \item\ressubheadingproj
+        {\href
+        {https://github.com/jeremylinlin/cs6650-scalable-distributed-systems}
+        {Distributed Ski Data Processing Engine}
+        }
+        {Sept. 2017 -- Nov. 2017}
+        {}{}  % TODO: How to fix this???
+        {\footnotesize
+        \begin{itemize}
+            \resitem
+            {Built a multi-threaded client that simulates up to 800k concurrent POST/GET
+            requests being sent to server}
+            \resitem
+            {Handled concurrent requests with multiple server instances (EC2)
+            with a load balancer (ELB)}
+            \resitem
+            {Added a metrics-capturing system using the Publish-Subscribe Model, where
+            raw metrics are generated and sent to RabbitMQ, received by another server
+            from the queue, and processed for data analytics}
+            \resitem
+            {Efficiently generated statistics (mean/median/99th percentile latency) for
+            each timestamp of up to 800k records, and visualize these data with matplotlib}
+
+        \end{itemize}
+        }
+    \end{itemize}
+
     % --------------------  Project 1 --------------------%
     \begin{itemize}
         \item\ressubheadingproj
         {\href
         {https://github.com/jeremylinlin/tic-tac-toe-mean}
-        {Multiplayer Tic-Tac-Toe Platform \normalfont (Northeastern Univ.)}
+        {Multiplayer Tic-Tac-Toe Platform}
         }
         {Jul. 2017 -- Aug. 2017}
         {}{}  % TODO: How to fix this???
@@ -170,7 +208,7 @@ urlcolor=black
     % --------------------  Project 2 --------------------%
     \begin{itemize}
         \item\ressubheadingproj
-        {Space Invaders \normalfont(Northeastern Univ.)}
+        {Space Invaders}
         {Oct. 2016 -- Nov. 2016}
         {}{}
         {\footnotesize
@@ -188,7 +226,7 @@ urlcolor=black
     % --------------------  Project 3 --------------------%
     \begin{itemize}
         \item\ressubheadingproj
-        {Algorithms Course Projects \normalfont (Coursera)}{Feb. 2016 -- Apr. 2016}
+        {Algorithms Course Projects}{Feb. 2016 -- Apr. 2016}
         {}{}
         {\footnotesize
         \begin{itemize}
@@ -197,8 +235,6 @@ urlcolor=black
             \resitem{Implemented an efficient, sorting-based algorithm to find every line segment
             that connects a subset of 4 or more of the points in the plane}
             \resitem{Developed a solution to the 8-puzzle problem using the A* search algorithm}
-            \resitem{Designed a data type that represents a set of points in a unit square using
-            a 2d-tree to support efficient range search and nearest-neighbor search}
         \end{itemize}
         }
     \end{itemize}
@@ -211,27 +247,8 @@ urlcolor=black
 
     \resheading{Experience}
 
-    % --------------------  SAP Labs --------------------%
-
     \begin{itemize}
-        \item\ressubheading
-        {SAP Labs China}
-        {Shanghai, China}
-        {Web Development Intern}{Jun. 2015 -- Oct. 2015}
-        {\footnotesize
-        \begin{itemize}
-            \resitem{Worked in SAP Jam Department in the hybris-community integration team}
-            \resitem{Used Spring Framework and later switched to JavaScript to fetch reviews
-            and ratings information from an E-commerce community, and
-            integrated them as add-ons on hybris Commerce Suite}
-            \resitem{Integrated Apache Solr into the project for better search performance}
-            \resitem{Fixed various bugs and cross-browser compatibility issues during
-            development and integration process}
-        \end{itemize}
-        }
-
         % --------------------  VSC  --------------------%
-
         \item
         \ressubheading
         {\href
@@ -240,18 +257,18 @@ urlcolor=black
         }
         {Shanghai, China}
         {Web Development Intern}
-        {Oct. 2014 -- Jan. 2015}
+        {Oct. 2015 -- Jan. 2016}
         {\footnotesize
         \begin{itemize}
             \resitem{Designed and developed a WeChat news pulling/pushing system with Spring
             MVC and Hibernate, and a mobile-friendly news feed with jQuery Mobile}
             \resitem{Participated in the development of an EDM (Email Direct Marketing)
             system using Ruby on Rails}
+            \resitem{Fixed various bugs and cross-browser compatibility issues during
+            development and integration process}
         \end{itemize}
         }
 
     \end{itemize}
-
-
 
 \end{document}
