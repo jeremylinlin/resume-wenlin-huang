@@ -6,6 +6,7 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage[pdftex]{hyperref}
+\usepackage{enumitem}
 \hypersetup{
 colorlinks,%
 citecolor=black,%
@@ -15,7 +16,7 @@ urlcolor=black
 %urlcolor=mygreylink     % can put red here to better visualize the links
 }
 \urlstyle{same}
-\definecolor{mygrey}{gray}{.85}
+\definecolor{mygrey}{gray}{.90}
 \definecolor{mygreylink}{gray}{.40}
 \textheight=9.0in
 \raggedbottom
@@ -25,30 +26,30 @@ urlcolor=black
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.375in}
 \addtolength{\evensidemargin}{0.375in}
-\addtolength{\textwidth}{0.5in}
+\addtolength{\textwidth}{0.70in}
 \addtolength{\topmargin}{-.375in}
 \addtolength{\textheight}{0.75in}
 
 %-----------------------------------------------------------
 %Custom commands
-\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resitem}[1]{
+    \item #1
+    \vspace{-2pt}
+}
+
 \newcommand{\resitemskills}[1]{\item #1 \vspace{-4pt}}
 \newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
 \newcommand{\ressubheading}[4]{
-\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+\begin{tabular*}{6.80in}{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
     \textit{#3} & \textit{#4} \\
 \end{tabular*}\vspace{-6pt}}
 
-\newcommand{\ressubheadingproj}[4]{
-\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+\newcommand{\ressubheadingproj}[2]{
+\begin{tabular*}{6.80in}{l@{\extracolsep{\fill}}r}
     \textbf{#1} & \textit{#2} \\
 \end{tabular*}\vspace{-6pt}}
 
-\newcommand{\ressubsubheading}[2]{
-\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-    \textit{#1} & \textit{#2} \\
-\end{tabular*}\vspace{-6pt}}
 %-----------------------------------------------------------
 
 \begin{document}
@@ -69,7 +70,6 @@ urlcolor=black
     \textbf{SDE/Web Development ({Back-end})} Internship:
     \textbf{\underline{Summer/Fall 2018}}
 
-
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %                                                                                           %
     %                                      Educations                                           %
@@ -79,11 +79,11 @@ urlcolor=black
     \resheading{Education}
     \begin{itemize}
         % --------------------  Education #1 - NEU --------------------%
-        \item[]
+        \item
         \ressubheading  % 下面四个项目 {} 会按照 \ressubheading 定义的格式来排版
         {\href
-        {http://www.northeastern.edu/seattle/}
-        {Northeastern University - Seattle}
+        {http://www.northeastern.edu}
+        {Northeastern University}
         }
         {Seattle, WA}
         {Master of Science in Computer Science}
@@ -99,7 +99,7 @@ urlcolor=black
         }
 
         % --------------------  Education #2 - SHNU --------------------%
-        \item[]
+        \item
         \ressubheading
         {\href
         {http://www.shnu.edu.cn/}
@@ -122,33 +122,39 @@ urlcolor=black
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %                                                                                           %
-    %                                    Technical Skills                                       %
+    %                                    Experience                                             %
     %                                                                                           %
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    \resheading{Technical Skills}
+    \resheading{Experience}
 
-    %%% 各种技术的分类这位仁兄做的特别好 https://bozho.net/cv/Bozhidar_Bozhanov_CV.pdf
     \begin{itemize}
-        \item {
-        \textbf{Languages:}
-        \vspace{-0.2cm}
-        Java (Proficient), JavaScript, Ruby, Python, Racket, C, SQL
+        % --------------------  Amazon  --------------------%
+        \item
+        \ressubheading
+        {\href
+            {https://aws.amazon.com/codebuild/}
+            {Amazon Web Services - AWS CodeBuild}
         }
-        \item {
-        \textbf{Databases:}
-        \vspace{-0.2cm}
-        MySQL, SQLite, MongoDB, DynamoDB
+        {Seattle, WA}
+        {Software Development Engineer Intern}
+        {Feb. 2018 -- Apr. 2018}
+        {\footnotesize
+        \begin{itemize} %[leftmargin=0.15in]
+            \resitem
+            {Implemented semantic versioning feature for CodeBuild so that
+             customers can version their build output artifacts in their buildspec}
+            \resitem
+            {Added support for different format combinations including plain text, environment variables,
+            and executables that maximizes customization for end users (Golang)}
+            \resitem
+            {Configured GitVersion in Dockerfile for all CodeBuild curated images so that
+            it can be used out of the box as an executable}
+            \resitem
+            {Added unit tests and integration tests (cucumber) that ensures all features work end to end as expected}
+        \end{itemize}
         }
-        \item {
-        \textbf{Cloud Services:}
-        \vspace{-0.2cm}
-        Amazon EC2, AWS Lambda, Heroku, mLab
-        }
-        \item {
-        \textbf{Frameworks:}
-        Bootstrap, AngularJS, Node/Express.js, Ruby on Rails
-        }
+
     \end{itemize}
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -167,7 +173,6 @@ urlcolor=black
         {Distributed Ski Data Processing Engine}
         }
         {Sept. 2017 -- Dec. 2017}
-        {}{}  % TODO: How to fix this???
         {\footnotesize
         \begin{itemize}
             \resitem
@@ -199,7 +204,6 @@ urlcolor=black
         {Multiplayer Tic-Tac-Toe Platform}
         }
         {Jul. 2017 -- Aug. 2017}
-        {}{}  % TODO: How to fix this???
         {\footnotesize
         \begin{itemize}
             \resitem
@@ -223,7 +227,6 @@ urlcolor=black
         \item\ressubheadingproj
         {Space Invaders}
         {Oct. 2016 -- Nov. 2016}
-        {}{}
         {\footnotesize
         \begin{itemize}
             \resitem
@@ -243,7 +246,6 @@ urlcolor=black
     \begin{itemize}
         \item\ressubheadingproj
         {Algorithms Course Projects}{Feb. 2016 -- Apr. 2016}
-        {}{}
         {\footnotesize
         \begin{itemize}
             \resitem
@@ -260,37 +262,33 @@ urlcolor=black
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %                                                                                           %
-    %                                    Experience                                             %
+    %                                    Technical Skills                                       %
     %                                                                                           %
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    \resheading{Experience}
+    \resheading{Technical Skills}
 
+    %%% 各种技术的分类这位仁兄做的特别好 https://bozho.net/cv/Bozhidar_Bozhanov_CV.pdf
     \begin{itemize}
-        % --------------------  VSC  --------------------%
-        \item
-        \ressubheading
-        {\href
-        {http://www.vsc.com}
-        {Venus Software Corporation}
+        \item {
+        \textbf{Languages:}
+        \vspace{-0.2cm}
+        Java (Proficient), JavaScript, Ruby, Python, Go, Scala, C, Racket, SQL
         }
-        {Shanghai, China}
-        {Web Development Intern}
-        {Oct. 2015 -- Jan. 2016}
-        {\footnotesize
-        \begin{itemize}
-            \resitem
-            {Designed and developed a WeChat news pulling/pushing system with Spring
-            MVC and Hibernate, and a mobile-friendly news feed with jQuery Mobile}
-            \resitem
-            {Participated in the development of an EDM (Email Direct Marketing)
-            system using Ruby on Rails}
-            \resitem
-            {Fixed various bugs and cross-browser compatibility issues for our team during
-                     the development process}
-        \end{itemize}
+        \item {
+        \textbf{Databases:}
+        \vspace{-0.2cm}
+        MySQL, SQLite, MongoDB, DynamoDB
         }
-
+        \item {
+        \textbf{Cloud Services:}
+        \vspace{-0.2cm}
+        Amazon EC2, Amazon S3, AWS Lambda, AWS CodeBuild, Heroku, mLab
+        }
+        \item {
+        \textbf{Frameworks:}
+        Bootstrap, AngularJS, Node/Express.js, Ruby on Rails
+        }
     \end{itemize}
 
 \end{document}
