@@ -65,7 +65,7 @@ urlcolor=black
 
     (650) 567-6624,
     \href {mailto:huang.wenl@husky.neu.edu} {huang.wenl@husky.neu.edu},
-    {129th Pl NE, Bellevue, WA 98005} \\
+    {N 91st St, Seattle, WA 98103} \\
 
     {
         \underline{
@@ -89,12 +89,12 @@ urlcolor=black
         \item
         \ressubheading  % 下面四个项目 {} 会按照 \ressubheading 定义的格式来排版
         {\href
-        {http://www.northeastern.edu}
-        {Northeastern University}
+            {http://www.northeastern.edu}
+            {Northeastern University}
         }
         {Seattle, WA}
         {Master of Science in Computer Science}
-        {Sept. 2016 -- Dec. 2019 (Expected)}
+        {Sept. 2016 -- Dec. 2019}
         {\footnotesize
         \begin{itemize}
             \resitem
@@ -119,20 +119,31 @@ urlcolor=black
         \item
         \ressubheading
         {\href
-        {https://offerup.com/}
-        {OfferUp, Inc - Autos Team}
+            {https://offerup.com/}
+            {OfferUp, Inc - Autos Team}
         }
         {Bellevue, WA}
-        {Backend SDE Intern}
-        {May. 2019 -- Present}
+        {Software Development Engineer Intern - Backend}
+        {May. 2019 -- Aug. 2019}
         {\footnotesize
         \begin{itemize} %[leftmargin=0.15in]
             \resitem
             {Migrated promotion package tracking system from spreadsheet to Django Admin,
             backed by RESTful APIs and DynamoDB}
             \resitem
-            {Provisioned AWS resources with Terraform, and enabled versioning for
-            promotion package audit history with DynamoDB Transactions API}
+            {Designed and implemented versioning for promotion package audit history with
+            \href{https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/transactions.html}
+                 {DynamoDB Transactions API}
+            }
+            \resitem
+            {Updated Terraform and Snowflake scripts to ensure
+            the new DynamoDB table works with the existing data pipeline}
+            \resitem
+            {Reduced the runtime of the airflow job generating autos dealers' promotion package items
+            by 90\% with multithreading}
+            \resitem
+            {Backfilled autos dealers' promotion package data to DynamoDB production table, and
+            handed the tool over to the auto sales team that significantly increased their productivity}
         \end{itemize}
         }
 
@@ -205,8 +216,8 @@ urlcolor=black
     \begin{itemize}
         \item\ressubheadingproj
         {\href
-        {https://github.com/jeremylinlin/cs6650-scalable-distributed-systems}
-        {Distributed Ski Data Processing Engine}
+            {https://github.com/jeremylinlin/cs6650-scalable-distributed-systems}
+            {Distributed Ski Data Processing Engine}
         }
         {Sept. 2017 -- Dec. 2017}
         {\footnotesize
@@ -236,8 +247,8 @@ urlcolor=black
     \begin{itemize}
         \item\ressubheadingproj
         {\href
-        {https://github.com/jeremylinlin/tic-tac-toe-mean}
-        {Multiplayer Tic-Tac-Toe Game Platform}
+            {https://github.com/jeremylinlin/tic-tac-toe-mean}
+            {Multiplayer Tic-Tac-Toe Game Platform}
         }
         {Jul. 2017 -- Aug. 2017}
         {\footnotesize
